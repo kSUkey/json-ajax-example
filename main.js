@@ -22,7 +22,7 @@ function renderHTML(data){
 	}
 	if(i==data.length)
 	{
-		htmlString += "<p>Total no. of Entries : " + i + "</p>";
+		document.getElementById("num").innerHTML="Total Entries : " + i;		
 		i++;
 		document.getElementById('btn').style.display='none';
 		document.getElementById('myInput').style.display='block';
@@ -33,7 +33,7 @@ function renderHTML(data){
 
 function myFunction() {
   // Declare variables
-  var input, filter, table, tr, td, i;
+  var input, filter, table, tr, td, i, count=9;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
   table = document.getElementById("cars-info");
@@ -62,7 +62,8 @@ function myFunction() {
         								tr[i].style.display = "";
       										} else {
         										tr[i].style.display = "none";
-      										}
+												count--;
+											}
     										}
 											}
 										}
@@ -71,4 +72,5 @@ function myFunction() {
 							}
 						}
 					}
+					document.getElementById("num").innerHTML="Entries Found : " + count;
 				}
