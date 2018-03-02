@@ -22,7 +22,7 @@ function renderHTML(data){
 	}
 	if(i==data.length)
 	{
-		htmlString += ""
+		htmlString += "<p>Total no. of Entries : " + i + "</p>";
 		i++;
 		document.getElementById('btn').style.display='none';
 		document.getElementById('myInput').style.display='block';
@@ -33,7 +33,7 @@ function renderHTML(data){
 
 function myFunction() {
   // Declare variables
-  var input, filter, table, tr, td, i, j, k, l;
+  var input, filter, table, tr, td, i;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
   table = document.getElementById("cars-info");
